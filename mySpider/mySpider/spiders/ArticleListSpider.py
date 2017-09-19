@@ -6,6 +6,7 @@ import scrapy
 from scrapy.selector import Selector
 
 from mySpider.items import ArticleListItem
+from mySpider.spiders.ArticleSpider import ArticleSpider
 from Utility.utility import Utility
 
 # the spider to get the articleList
@@ -66,8 +67,8 @@ class ArticleListSpider(scrapy.Spider):
             print 'title==' + articleListItem['title']
             print 'url=='   + articleListItem['url']
             print 'accountName==' + articleListItem['accountName']
-            print 'date==' + articleListItem['date']
+            # print 'date==' + articleListItem['date']
             print 'summary'
             print articleListItem['summary']
 
-            yield scrapy.Request(url, )
+            yield scrapy.Request(url, callback=ArticleSpider().parse)

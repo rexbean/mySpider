@@ -16,3 +16,13 @@ class ArticleListItem(scrapy.Item):
     summary = scrapy.Field()
     accountName = scrapy.Field()
     date = scrapy.Field()
+
+
+class ArticleItem(scrapy.Item):
+    title       = scrapy.Field()
+    date        = scrapy.Field()
+    author      = scrapy.Field()
+    accountName = scrapy.Field()
+    accountId   = scrapy.Field()
+    content     = scrapy.Field()
+    
