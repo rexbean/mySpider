@@ -11,11 +11,11 @@ import scrapy
 class ArticleListItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    url = scrapy.Field()
-    title = scrapy.Field()
-    summary = scrapy.Field()
+    url         = scrapy.Field()
+    title       = scrapy.Field()
+    summary     = scrapy.Field()
     accountName = scrapy.Field()
-    date = scrapy.Field()
+    date        = scrapy.Field()
 
 
 class ArticleItem(scrapy.Item):
@@ -25,4 +25,22 @@ class ArticleItem(scrapy.Item):
     accountName = scrapy.Field()
     accountId   = scrapy.Field()
     content     = scrapy.Field()
-    
+
+
+class AccountListItem(scrapy.Item):
+    accountName     = scrapy.Field()
+    accountId       = scrapy.Field()
+    function        = scrapy.Field()
+    authenticate    = scrapy.Field()
+    latestArticleN  = scrapy.Field()
+    latestArticleL  = scrapy.Field()
+    numPerMon       = scrapy.Field()
+    url             = scrapy.Field()
+
+class IPItem(scrapy.Item):
+    ip          = scrapy.Field()
+    port        = scrapy.Field()
+    protocol    = scrapy.Field()
+    speed       = scrapy.Field()
+    valid       = scrapy.Field()
+    time        = scrapy.Field()
